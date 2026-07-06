@@ -7,7 +7,8 @@ class prime_number:
         is_prime = True
         if self.num <=1:
            is_prime = False
-           return
+           print("not a prime")
+           return 
         for i in range(2,(limit+1)):
             if self.num % i == 0:
                 is_prime = False
@@ -18,5 +19,6 @@ class prime_number:
         else:
          print("Not Prime")
 
-p1 = prime_number(0)
+p1 = prime_number(17)
+
 p1.check_prime_num()
