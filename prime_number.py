@@ -1,24 +1,51 @@
-class prime_number:
-    def __init__(self,num):
-        self.num = num
-    
-    def check_prime_num(self):
-        limit = int(self.num ** 0.5)
-        is_prime = True
-        if self.num <=1:
-           is_prime = False
-           print("not a prime")
-           return 
-        for i in range(2,(limit+1)):
-            if self.num % i == 0:
-                is_prime = False
+
+# Code to check weather the number is prime number or not 
+Number = int(input("Enter the number : "))
+
+def Find_weather_number_Prime_number(Number):
+    sample_number = int(Number ** 0.5)
+    for digit in range (2,sample_number+1):
+        if Number % digit == 0 :
+            print(f"{Number} is not the prime number")
+            return
+        
+    print(f"{Number} is the prime number")
+
+Find_weather_number_Prime_number(Number)
+
+#code to check Prime number upto N number
+
+Number = int(input("Enter the number : "))
+
+def Find_weather_number_Prime_number_upto_N(Number):
+    for each_number in range(2,Number+1):
+        if each_number <= 1:
+            continue
+        sample_number = int(each_number ** 0.5)
+        for digit in range (2,sample_number+1):
+            if each_number % digit == 0 :
                 break
-
-        if is_prime:
-         print("Prime")
         else:
-         print("Not Prime")
+            print(f"Prime Number : {each_number}")
 
-p1 = prime_number(17)
+Find_weather_number_Prime_number_upto_N(Number)
 
-p1.check_prime_num()
+#code to check Prime number between two number
+
+Number1 = int(input("Enter the number1 : "))
+Number2 = int(input("Enter the number2 : "))
+
+def Find_Prime_number_between_two_Number(Number1,number2):
+
+    for each_number in range(Number1,number2+1):
+        if each_number <= 1:
+            continue
+        sample_number = int(each_number ** 0.5)
+        for digit in range (2,sample_number+1):
+            if each_number % digit == 0 :
+                break
+        else:
+            print(f"Prime Number : {each_number}")
+
+Find_Prime_number_between_two_Number(Number1,Number2)
+
